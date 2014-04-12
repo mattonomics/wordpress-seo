@@ -158,7 +158,7 @@ if ( ! class_exists( 'WPSEO_Twitter' ) ) {
 			 *
 			 * @api string $unsigned Name string
 			 */
-			$domain = apply_filters( 'wpseo_twitter_domain', site_url() );
+			$domain = apply_filters( 'wpseo_twitter_domain', get_bloginfo( 'name' ) );
 			if ( is_string( $domain ) && $domain !== '' ) {
 				$this->output_metatag( 'domain', $domain );
 			}
