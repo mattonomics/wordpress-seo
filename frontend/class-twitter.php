@@ -91,7 +91,7 @@ if ( ! class_exists( 'WPSEO_Twitter' ) ) {
 			$this->site_twitter();
 			$this->site_domain();
 			$this->author_twitter();
-			if ( in_array( $this->options['twitter_card_type'], array( 'summary_large_image', 'image' ) ) ) {
+			if ( in_array( $this->options['twitter_card_type'], array( 'summary_large_image', 'photo' ) ) ) {
 				$this->image();
 				$this->twitter_title();
 			}

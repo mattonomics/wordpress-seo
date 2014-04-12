@@ -2458,7 +2458,7 @@ if ( ! class_exists( 'WPSEO_Option_Social' ) ) {
 			
 			self::$twitter_card_types['summary']             = __( 'Summary', 'wordpress-seo' );
 			self::$twitter_card_types['summary_large_image'] = __( 'Summary with large image', 'wordpress-seo' );
-			self::$twitter_card_types['photo']				 = __( 'Image', 'wordpress-seo' );
+			self::$twitter_card_types['photo']				 = __( 'Photo', 'wordpress-seo' );
 		}
 
 
