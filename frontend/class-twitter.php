@@ -91,8 +91,9 @@ if ( ! class_exists( 'WPSEO_Twitter' ) ) {
 			$this->site_twitter();
 			$this->site_domain();
 			$this->author_twitter();
-			if ( 'summary_large_image' === $this->options['twitter_card_type'] ) {
+			if ( in_array( $this->options['twitter_card_type'], array( 'summary_large_image', 'image' ) ) ) {
 				$this->image();
+				$this->twitter_title();
 			}
 
 			// No need to show these when OpenGraph is also showing, as it'd be the same contents and Twitter
@@ -157,7 +158,7 @@ if ( ! class_exists( 'WPSEO_Twitter' ) ) {
 			 *
 			 * @api string $unsigned Name string
 			 */
-			$domain = apply_filters( 'wpseo_twitter_domain', get_bloginfo( 'name' ) );
+			$domain = apply_filters( 'wpseo_twitter_domain', site_url() );
 			if ( is_string( $domain ) && $domain !== '' ) {
 				$this->output_metatag( 'domain', $domain );
 			}
